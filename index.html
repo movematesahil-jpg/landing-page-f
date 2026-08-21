@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTL Logistics & Business Transportation Solutions | Movemate</title>
+    <meta name="description" content="Reliable FTL and transportation solutions for businesses across India. Get scalable capacity, GPS-enabled visibility and logistics support from Movemate.">
+    
+    <!-- Open Graph Tags for Social Preview -->
+    <meta property="og:title" content="FTL Logistics & Business Transportation Solutions | Movemate">
+    <meta property="og:description" content="Reliable FTL and transportation solutions for businesses across India. Get scalable capacity, GPS-enabled visibility and logistics support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.movemate.in/ftl-logistics">
+    <!-- Publishable Preview Image -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <link rel="canonical" href="https://www.movemate.in/ftl-logistics">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --------------------------------------
+           DESIGN SYSTEM & VARIABLES
+        -------------------------------------- */
+        :root {
+            --mm-yellow: #F6C915;
+            --mm-black: #1E1E1E;
+            --mm-white: #FFFFFF;
+            --mm-off-white: #F7F7F5;
+            --mm-border: #E5E5E5;
+            --mm-gray: #666666;
+            --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+            --container-max: 1200px;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-primary); color: var(--mm-black); background-color: var(--mm-white); line-height: 1.6; font-size: 16px; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+        .bg-light { background-color: var(--mm-off-white); }
+        .text-center { text-align: center; }
+        .mt-2 { margin-top: 1.5rem; }
+        .hidden { display: none !important; }
+
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--mm-black); letter-spacing: -0.02em; }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        h4 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        p { color: var(--mm-gray); margin-bottom: 1rem; }
+        
+        .section-header { max-width: 800px; margin-bottom: 4rem; }
+        .section-header h2 { margin-bottom: 1rem; }
+        .section-header p { font-size: 1.125rem; }
+
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-weight: 600; font-size: 1rem; border-radius: var(--radius-sm); transition: all 0.3s ease; cursor: pointer; border: none; text-align: center; }
+        .btn-primary { background-color: var(--mm-yellow); color: var(--mm-black); }
+        .btn-primary:hover { background-color: #e5b910; transform: translateY(-2px); }
+        .btn-secondary { background-color: transparent; border: 1px solid var(--mm-border); color: var(--mm-black); }
+        .btn-secondary:hover { border-color: var(--mm-black); background-color: var(--mm-off-white); }
+        .btn-block { width: 100%; }
+
+        .navbar { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(8px); border-bottom: 1px solid var(--mm-border); z-index: 100; padding: 16px 0; transition: padding 0.3s ease; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-text { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.05em; color: var(--mm-black); }
+        .logo-text span { color: var(--mm-yellow); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-weight: 500; font-size: 0.9375rem; color: var(--mm-black); transition: color 0.2s ease; }
+        .nav-links a:hover { color: var(--mm-yellow); }
+        
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .hamburger .bar { display: block; width: 24px; height: 2px; background-color: var(--mm-black); margin: 5px 0; transition: 0.3s; }
+        .mobile-menu { display: none; background-color: var(--mm-white); position: absolute; top: 100%; left: 0; width: 100%; border-bottom: 1px solid var(--mm-border); padding: 1rem 24px; }
+        .mobile-menu.active { display: flex; flex-direction: column; gap: 1rem; }
+        .mobile-link { font-size: 1.125rem; font-weight: 500; padding: 0.5rem 0; border-bottom: 1px solid var(--mm-border); }
+
+        .grid { display: grid; gap: 2rem; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+        section { padding: 6rem 0; }
+        .card { background: var(--mm-white); border: 1px solid var(--mm-border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-subtle); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+        .hero { padding: 4rem 0 6rem; }
+        .hero-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero h1 span { color: var(--mm-yellow); }
+        .hero p { font-size: 1.125rem; max-width: 90%; margin-bottom: 2.5rem; }
+        .hero-ctas { display: flex; gap: 1rem; margin-bottom: 2rem; }
+        .hero-trust-text { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--mm-gray); font-weight: 500; }
+        .hero-visual { position: relative; }
+        .visual-accent { position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background-color: var(--mm-yellow); z-index: -1; border-radius: var(--radius-sm); }
+        .hero-img { border-radius: var(--radius-md); object-fit: cover; aspect-ratio: 4/3; }
+
+        .trust-metrics { padding: 3rem 0; border-top: 1px solid var(--mm-border); border-bottom: 1px solid var(--mm-border); }
+        .metrics-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .metric-item h3 { font-size: 2.5rem; color: var(--mm-yellow); margin-bottom: 0.25rem; }
+        .metric-item p { margin: 0; font-weight: 600; color: var(--mm-black); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; }
+
+        .solution-block .icon-wrapper { width: 56px; height: 56px; background: var(--mm-off-white); border: 1px solid var(--mm-border); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--mm-black); }
+        .service-tag { display: inline-block; background: var(--mm-black); color: var(--mm-white); font-size: 0.75rem; font-weight: 700; padding: 4px 8px; border-radius: 2px; margin-bottom: 1rem; }
+
+        .industry-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+        .industry-item { padding: 1.5rem 1rem; border: 1px solid var(--mm-border); text-align: center; font-weight: 600; border-radius: var(--radius-sm); transition: all 0.2s ease; cursor: default; }
+        .industry-item:hover { border-color: var(--mm-yellow); background: var(--mm-off-white); }
+
+        .visibility-section { background: var(--mm-black); color: var(--mm-white); padding: 8rem 0; }
+        .visibility-section h2 { color: var(--mm-white); }
+        .visibility-section p { color: #A0A0A0; }
+        .visibility-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .visibility-graphic { background: #2A2A2A; padding: 4rem; border-radius: var(--radius-lg); position: relative; }
+        .route-line { position: relative; height: 4px; background: #444; margin: 2rem 0; display: flex; justify-content: space-between; align-items: center; }
+        .route-point { width: 16px; height: 16px; border-radius: 50%; background: var(--mm-white); position: relative; }
+        .route-point span { position: absolute; top: 24px; left: 50%; transform: translateX(-50%); font-size: 0.875rem; color: #A0A0A0; font-weight: 500; }
+        .route-truck { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #2A2A2A; padding: 0 10px; }
+        .visibility-section .btn-secondary { color: var(--mm-white); border-color: #444; }
+        .visibility-section .btn-secondary:hover { background: var(--mm-white); color: var(--mm-black); border-color: var(--mm-white); }
+
+        .process-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+        .step-number { font-size: 3rem; font-weight: 700; color: var(--mm-yellow); opacity: 0.3; margin-bottom: 0.5rem; line-height: 1; }
+
+        .credibility { padding: 4rem 0; background: var(--mm-yellow); }
+        .credibility h2 { margin-bottom: 0.5rem; font-size: clamp(1.5rem, 3vw, 2.5rem); }
+        .credibility p { color: var(--mm-black); font-weight: 500; margin: 0; }
+
+        .faq-accordion { max-width: 800px; }
+        .faq-item { border-bottom: 1px solid var(--mm-border); }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 1.5rem 0; font-size: 1.125rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--mm-black); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer p { padding-bottom: 1.5rem; }
+        .faq-question .icon { transition: transform 0.3s ease; font-size: 1.5rem; font-weight: 400; }
+        .faq-item.active .faq-answer { max-height: 200px; }
+        .faq-item.active .faq-question .icon { transform: rotate(45deg); }
+
+        .conversion-section { padding: 8rem 0; }
+        .conversion-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .conversion-copy h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+        .conversion-form-wrapper { background: var(--mm-white); border: 1px solid var(--mm-border); padding: 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-hover); }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+        input, select, textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--mm-border); border-radius: var(--radius-sm); font-family: var(--font-primary); font-size: 1rem; transition: border-color 0.2s ease; background: var(--mm-off-white); }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--mm-black); background: var(--mm-white); }
+        .form-error { color: #dc3545; font-size: 0.875rem; margin-bottom: 1rem; font-weight: 500; }
+        .form-success { text-align: center; padding: 3rem 0; }
+        .form-success svg { width: 64px; height: 64px; margin-bottom: 1.5rem; }
+
+        .footer { background: var(--mm-black); color: var(--mm-white); padding: 5rem 0 2rem; }
+        .footer-container { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 4rem; }
+        .footer-brand p { color: #A0A0A0; margin-top: 1rem; max-width: 300px; }
+        .footer h4 { color: var(--mm-white); margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .footer-links a, .footer-contact p { display: block; color: #A0A0A0; margin-bottom: 0.75rem; transition: color 0.2s; }
+        .footer-links a:hover, .footer-contact a:hover { color: var(--mm-yellow); }
+        .footer-bottom { border-top: 1px solid #333; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: #A0A0A0; font-size: 0.875rem; }
+        .legal-links a { margin-left: 1.5rem; }
+
+        .mobile-sticky-cta { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--mm-white); padding: 16px; border-top: 1px solid var(--mm-border); box-shadow: 0 -4px 20px rgba(0,0,0,0.05); z-index: 90; }
+
+        @media (max-width: 1024px) {
+            .hero-container { gap: 2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .conversion-container { gap: 2rem; }
+            .footer-container { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-actions .btn { display: none; }
+            .hamburger { display: block; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 2.5rem; }
+            .hero-ctas { justify-content: center; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .metrics-container { justify-content: center; text-align: center; }
+            .visibility-container { grid-template-columns: 1fr; }
+            .process-timeline { grid-template-columns: 1fr; gap: 3rem; }
+            .conversion-container { grid-template-columns: 1fr; }
+            .conversion-form-wrapper { padding: 2rem 1.5rem; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .mobile-sticky-cta { display: block; }
+            body { padding-bottom: 80px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-ctas { flex-direction: column; }
+            .hero h1 { font-size: 2rem; }
+            section { padding: 4rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 01. STICKY NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MOVE<span>MATE</span></span>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#solutions">Solutions</a>
+                <a href="#industries">Industries</a>
+                <a href="#why-movemate">Why Movemate</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#lead-form-section" class="btn btn-primary">Request an FTL Consultation</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#solutions" class="mobile-link">Solutions</a>
+            <a href="#industries" class="mobile-link">Industries</a>
+            <a href="#why-movemate" class="mobile-link">Why Movemate</a>
+            <a href="#how-it-works" class="mobile-link">How It Works</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 02. HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Move More. Deliver Better.<br><span>FTL Logistics Built for Business.</span></h1>
+                    <p>Movemate helps businesses move goods efficiently across India with dependable transportation capacity, complete operational visibility, and professional logistics execution.</p>
+                    <div class="hero-ctas">
+                        <a href="#lead-form-section" class="btn btn-primary">Request an FTL Consultation</a>
+                        <a href="#lead-form-section" class="btn btn-secondary">Talk to a Logistics Expert</a>
+                    </div>
+                    <div class="hero-trust-text">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span>Built for businesses that move at scale.</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-accent"></div>
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern commercial logistics truck moving on highway" class="hero-img" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. TRUST METRICS -->
+        <section class="trust-metrics">
+            <div class="container metrics-container">
+                <div class="metric-item">
+                    <h3>45,000+</h3>
+                    <p>Customers</p>
+                </div>
+                <div class="metric-item">
+                    <h3>26+</h3>
+                    <p>Cities</p>
+                </div>
+                <div class="metric-item">
+                    <h3>205+</h3>
+                    <p>GPS-enabled Trucks</p>
+                </div>
+                <div class="metric-item">
+                    <h3>350+</h3>
+                    <p>Logistics Consultations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. THE BUSINESS PROBLEM -->
+        <section class="business-problem bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Logistics Shouldn't Be the Bottleneck.</h2>
+                    <p>Managing transportation shouldn't consume your operational bandwidth. Modern businesses face common challenges that restrict growth.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card problem-card">
+                        <h4>Unreliable Availability</h4>
+                        <p>Struggling to find vehicles during demand spikes or critical operational windows.</p>
+                    </div>
+                    <div class="card problem-card">
+                        <h4>Zero Visibility</h4>
+                        <p>No operational oversight of where your shipment is or when it will realistically arrive.</p>
+                    </div>
+                    <div class="card problem-card">
+                        <h4>Fragmented Operations</h4>
+                        <p>Coordinating with multiple unorganized vendors leading to communication gaps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. MOVEMATE SOLUTION -->
+        <section class="solution-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>One Logistics Partner. Better Control Over Every Move.</h2>
+                    <p>We simplify enterprise transportation with structure, technology, and execution.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="solution-block">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M3 9h18M9 21V9"/></svg>
+                        </div>
+                        <h4>Dependable Capacity</h4>
+                        <p>Scalable transportation resources that adapt to your changing operational volumes.</p>
+                    </div>
+                    <div class="solution-block">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h4>Professional Execution</h4>
+                        <p>Experienced logistics teams handling the complexities of route planning and delivery.</p>
+                    </div>
+                    <div class="solution-block">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <h4>GPS-Enabled Visibility</h4>
+                        <p>Maintain accurate oversight of your assets in transit from origin to destination.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. FTL / TRANSPORTATION SOLUTIONS -->
+        <section id="solutions" class="solutions-detail bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Transportation Solutions Built Around Your Business.</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="card service-card">
+                        <div class="service-tag">DCC</div>
+                        <h3>Dedicated Contract Carriage</h3>
+                        <p>Customized trucking solutions where vehicles are dedicated to your business for recurring transportation requirements. Ideal for consistent volume.</p>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-tag">ADHOC</div>
+                        <h3>On-Demand Spot Freight</h3>
+                        <p>Flexible transportation for one-time, urgent, seasonal, or irregular requirements. Fast deployment when you need immediate capacity.</p>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-tag">LHC</div>
+                        <h3>Lease Hire Contracts</h3>
+                        <p>Access dedicated trucks and professional drivers without the capital expenditure and operational burden of managing your own fleet.</p>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-tag">PROJECT</div>
+                        <h3>Project Logistics</h3>
+                        <p>End-to-end transportation planning and specialized execution for large-scale, complex, or project-based operational requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. INDUSTRIES -->
+        <section id="industries" class="industries">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Built for Industries That Can't Afford Delays.</h2>
+                    <p>We understand the specific compliance, handling, and scheduling needs of different sectors.</p>
+                </div>
+                <div class="grid industry-grid">
+                    <div class="industry-item">Manufacturing</div>
+                    <div class="industry-item">FMCG</div>
+                    <div class="industry-item">E-commerce</div>
+                    <div class="industry-item">D2C Brands</div>
+                    <div class="industry-item">Retail</div>
+                    <div class="industry-item">Apparel</div>
+                    <div class="industry-item">Furniture</div>
+                    <div class="industry-item">Solar Equipment</div>
+                    <div class="industry-item">Industrial</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 08. WHY MOVEMATE -->
+        <section id="why-movemate" class="why-movemate bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Businesses Choose Movemate</h2>
+                </div>
+                <div class="grid grid-3">
+                    <div class="feature-item">
+                        <h4>Reliable Capacity</h4>
+                        <p>Transportation support designed directly around your recurring business requirements.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>GPS-Enabled Visibility</h4>
+                        <p>Track vehicle movement and maintain better operational visibility across your supply chain.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Flexible Service Models</h4>
+                        <p>Choose dedicated, on-demand, lease, or project-based transportation formats.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Scalable Operations</h4>
+                        <p>Quickly adjust capacity to support changing business volumes and seasonal spikes.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Operational Expertise</h4>
+                        <p>Experienced logistics professionals heavily focused on execution and risk mitigation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Business-Focused Support</h4>
+                        <p>A true logistics partner aligned strategically with your operational bottom line.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09. SHIPMENT VISIBILITY -->
+        <section class="visibility-section">
+            <div class="container visibility-container">
+                <div class="visibility-content">
+                    <h2>Know Where Your Shipment Is.</h2>
+                    <p>Say goodbye to operational blind spots. Movemate integrates GPS-enabled vehicle tracking so your logistics team maintains precise oversight of assets in transit.</p>
+                    <a href="#lead-form-section" class="btn btn-secondary mt-2">Talk to a Logistics Expert</a>
+                </div>
+                <div class="visibility-graphic">
+                    <div class="route-line">
+                        <div class="route-point start">
+                            <span>Origin</span>
+                        </div>
+                        <div class="route-truck">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#F6C915" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <div class="route-point end">
+                            <span>Destination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. HOW IT WORKS -->
+        <section id="how-it-works" class="how-it-works bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p>A streamlined process to get your freight moving efficiently.</p>
+                </div>
+                <div class="process-timeline">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h4>Tell Us What You Move</h4>
+                        <p>Provide details on volume, frequency, and cargo specifics.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h4>We Understand Your Requirement</h4>
+                        <p>Our experts analyze your current operational bottlenecks.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h4>We Build the Right Solution</h4>
+                        <p>We assign the optimal transport model (DCC, Adhoc, etc.).</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">04</div>
+                        <h4>Your Goods Move With Visibility</h4>
+                        <p>Professional execution supported by operational tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. CREDIBILITY -->
+        <section class="credibility">
+            <div class="container text-center">
+                <h2>Trusted by growing enterprises across 26+ cities in India.</h2>
+                <p>Join the 45,000+ customers who rely on our operational structure.</p>
+            </div>
+        </section>
+
+        <!-- 12. FAQ -->
+        <section id="faq" class="faq-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What industries does Movemate serve?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We specialize in B2B logistics across Manufacturing, FMCG, E-commerce, D2C, Retail, Apparel, Furniture, Solar Equipment, and broad Industrial sectors.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What is FTL transportation?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Full Truck Load (FTL) transportation dedicates an entire commercial truck to a single business shipment, ensuring faster transit times and reduced handling risk.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Does Movemate provide dedicated trucks?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Through our Dedicated Contract Carriage (DCC) and Lease Hire models, we provide dedicated vehicles for your recurring operational needs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can I use Movemate for one-time shipments?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Our On-Demand Spot Freight (ADHOC) solution is designed for one-time, urgent, or irregular transportation requirements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Does Movemate provide GPS-enabled tracking?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we utilize a network of GPS-enabled trucks allowing our logistics team to monitor vehicle movement and provide operational updates.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How can I discuss my transportation requirement?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Simply fill out the FTL Consultation form on this page. One of our logistics experts will review your details and contact you to design a solution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13 & 14. FINAL CONVERSION & LEAD FORM -->
+        <section id="lead-form-section" class="conversion-section">
+            <div class="container conversion-container">
+                <div class="conversion-copy">
+                    <h2>Let's Build a Better Transportation Plan for Your Business.</h2>
+                    <p>Tell us about your transportation requirement and our enterprise logistics team will get in touch to discuss capacity, pricing, and execution models.</p>
+                    <div class="contact-methods mt-2">
+                        <p><strong>Or reach us directly:</strong></p>
+                        <p>+91 9266 888 777</p>
+                        <p>+91 9266 222 333</p>
+                        <p>care@movemate.in</p>
+                    </div>
+                </div>
+                
+                <div class="conversion-form-wrapper">
+                    <div id="form-success-msg" class="hidden form-success">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                        <h3>Thank you.</h3>
+                        <p>Your requirement has been received. Our logistics team will get in touch with you shortly.</p>
+                    </div>
+                    
+                    <form id="leadForm" class="lead-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="workEmail">Work Email *</label>
+                                <input type="email" id="workEmail" name="workEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name *</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="jobRole">Job Role (Optional)</label>
+                                <input type="text" id="jobRole" name="jobRole">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry *</label>
+                                <select id="industry" name="industry" required>
+                                    <option value="" disabled selected>Select Industry</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="FMCG">FMCG</option>
+                                    <option value="E-commerce">E-commerce</option>
+                                    <option value="D2C">D2C</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Apparel">Apparel</option>
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Solar Equipment">Solar Equipment</option>
+                                    <option value="Industrial">Industrial</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transportReq">Transportation Requirement *</label>
+                            <select id="transportReq" name="transportReq" required>
+                                <option value="" disabled selected>Select Model</option>
+                                <option value="Dedicated FTL">Dedicated FTL (DCC)</option>
+                                <option value="Spot / ADHOC Freight">Spot / ADHOC Freight</option>
+                                <option value="Lease Hire">Lease Hire Contracts</option>
+                                <option value="Project Logistics">Project Logistics</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="origin">Origin City *</label>
+                                <input type="text" id="origin" name="origin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination City *</label>
+                                <input type="text" id="destination" name="destination" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additional">Additional Requirement (Optional)</label>
+                            <textarea id="additional" name="additional" rows="3"></textarea>
+                        </div>
+
+                        <input type="hidden" name="campaign_id" value="FTL-AUG-2026">
+                        <div id="form-error-msg" class="form-error hidden">Please fill all required fields correctly.</div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Request an FTL Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-text" style="color:white">MOVE<span style="color:var(--mm-yellow)">MATE</span></span>
+                <p>Reliable logistics and transportation partner helping businesses move goods efficiently across India.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="#solutions">Dedicated FTL</a>
+                <a href="#solutions">Adhoc Freight</a>
+                <a href="#solutions">Lease Hire</a>
+                <a href="#solutions">Project Logistics</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#why-movemate">Why Movemate</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>+91 9266 888 777</p>
+                <p>+91 9266 222 333</p>
+                <p><a href="mailto:care@movemate.in">care@movemate.in</a></p>
+                <p><a href="http://www.movemate.in" target="_blank" rel="noopener">www.movemate.in</a></p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Movemate Logistics. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#lead-form-section" class="btn btn-primary btn-block">Request an FTL Consultation</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            hamburger.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+            mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+            // Navbar Compact on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.style.padding = window.scrollY > 50 ? '10px 0' : '16px 0';
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const navHeight = navbar.offsetHeight;
+                        const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // Form Submit Mockup (For the Preview file)
+            const leadForm = document.getElementById('leadForm');
+            const successMsg = document.getElementById('form-success-msg');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (leadForm) {
+                leadForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Submitting...';
+                    
+                    // Simulate network request for the preview
+                    setTimeout(() => {
+                        leadForm.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
